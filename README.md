@@ -1,2 +1,2 @@
 # nsufilm.github.io
-Repository for http://nsufilm.com/ development files.
+Repository hosting http://www.nsufilm.com/ web files.
