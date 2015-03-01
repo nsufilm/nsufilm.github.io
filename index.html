@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>NSU Film Soc - Home of the Northumbria Students' Union Film and TV Society</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Home of the Northumbria Students' Union Film and TV Society" />
+		<meta name="keywords" content="film, tv, northumbria, university, northumbria university, students, society, group" />
+		
+		<!--[if lt IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+				<![endif]-->
+				<!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a></div> <![endif]-->
+	
+		<link rel="icon" href="favicon.ico">		
+		<link rel="stylesheet" href="master.css" media="screen" />
+        <!-- Load Bootstrap for Button Styles -->
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap-theme.min.css" rel="stylesheet">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="video.js"></script>
+				<script>
+					$(document).ready(function() {
+						$('dl').toggle();
+						$('h2').bind('click', function(event) {
+							event.preventDefault();
+							$(this).next('dl').slideToggle(500, function() {
+								$('.video-background').videobackground('resize');
+							});
+						});
+						$('body').prepend('<div class="video-background"></div>');
+						$('.video-background').videobackground({
+							videoSource: ['video.mp4','video.webm','video.ogv'],
+							controlPosition: '#main',
+							poster: 'stillbackground.jpg',
+							loadedCallback: function() {
+								$(this).videobackground('mute', {controlPosition: '#main'});
+							}
+						});
+					});
+		</script>
+	</head>
+
+<body>
+		
+<div id="full">
+	<div id="main">
+		<div id="frame">
+        	<img src="logo.png"/>
+            <p>
+            	<br/><br/>
+            	<a href="https://facebook.com/groups/nsufilm/" class="btn btn-primary btn-lg" role="button">Facebook</a>
+                <a href="https://twitter.com/nsufilm" class="btn btn-info btn-lg" role="button">Twitter</a>
+                <a href="https://www.youtube.com/watch?v=yfDt8L7TRGs" class="btn btn-danger btn-lg" role="button">YouTube</a>
+
+            </p>
+		</div>
+	</div>
+</div>	
+
+</body>
+
+</html>
